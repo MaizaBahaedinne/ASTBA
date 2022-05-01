@@ -91,14 +91,14 @@
                   <p class="text-5 text-light mb-3">Soyez averti lorsque nous lançons.</p>
                   <!-- Subscribe Form -->
 			  <div class="">
-			
+			        <form action="<?php echo base_url() ?>Contact/addNew" method="post">
                 <div class="input-group">
-                  <input type="email" name="subscribe-form-email" class="form-control required"  placeholder="Enter Votre Email .." >
+                  <input type="email" name="email" class="form-control required"  placeholder="Enter Votre Email .." >
                   <button  class="btn btn-primary px-4 shadow-none" type="submit">
                     <span class="d-none d-sm-block">Prévenez-moi</span><span class="text-4 d-block d-sm-none"><i class="fas fa-arrow-right"></i></span>
                   </button>
                 </div>
-        
+          </form>
 			  <div class="subscribe-form-result mt-3"></div>
 			  </div>
               <!-- Subscribe End -->

@@ -54,7 +54,7 @@
                   <p class="text-5 text-light mb-3">Soyez averti lorsque nous lançons.</p>
                   <!-- Subscribe Form -->
               <div class="subscribe-form">
-              <form action="php/subscribe.php" role="form" method="post">
+              <form action="<?php echo base_url()  ?>Contact/Notify" role="form" method="post">
                 <div class="input-group">
                   <input type="email" id="subscribe-form-email" name="subscribe-form-email" class="form-control required" required="" placeholder="Enter Your Email Here..">
                   <button id="subscribe-form-submit" name="subscribe-form-submit" class="btn btn-primary px-4 shadow-none" type="submit"><span class="d-none d-sm-block">Prévenez-moi</span><span class="text-4 d-block d-sm-none"><i class="fas fa-arrow-right"></i></span></button>
@@ -76,15 +76,15 @@
                 <h3 class="fw-600 mb-3 mt-3">Nous contacter</h3>
                 <p class="text-black-50 mb-4">Envoyez-nous une note.</p>
                 <!-- Contact Form -->
-                <form id="contact-form" action="php/mail.php" method="post">
+                <form id="contact-form" action="<?php echo base_url()  ?>Contact/addNew" method="post">
                   <div class="mb-3">
-                    <input id="name" name="name" type="text" class="form-control border-2" placeholder="Enter Votre Nom" required="">
+                    <input id="name" name="nom" type="text" class="form-control border-2" placeholder="Enter Votre Nom" required="">
                   </div>
                   <div class="mb-3">
                     <input id="email" name="email" type="email" class="form-control border-2" placeholder="Enter Votre Email" required="">
                   </div>
                   <div class="mb-3">
-                    <textarea id="form-message" name="form-message" class="form-control border-2" rows="2" placeholder="Entrez votre demande" required=""></textarea>
+                    <textarea id="form-message" name="text" class="form-control border-2" rows="2" placeholder="Entrez votre demande" required=""></textarea>
                   </div>
                   <div class="d-grid mt-4">
                     <button id="submit-btn" class="btn btn-primary" type="submit">Envoyer le message</button>
@@ -125,8 +125,9 @@
           <div class="col-lg-4">
             <div class="featured-box text-center">
               <div class="featured-box-icon text-primary"> <i class="far fa-paper-plane"></i></div>
-              <h4 class="fw-600">Nos Mission</h4>
-              <p class="text-3">Encadrer et developper les compétence des éleve en technologie. </p>
+              <h4 class="fw-600">Nos Missions</h4>
+              <p class="text-3">Encadrer les éleve dans ces projets.</p>
+              <p class="text-3">Developper les compétences des jeunes  dans le domaines des sciences et technologie .</p>
                <p class="text-3">. </p>
             </div>
           </div>

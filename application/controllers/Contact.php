@@ -8,10 +8,8 @@ class Contact extends BaseController{
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('howweare_model');
-		$this->load->model('values_model');
-		$this->load->model('vision_model');
-		$this->load->model('mission_model');
+
+		$this->load->model('contact_model');
 	}
 
 
@@ -21,7 +19,7 @@ class Contact extends BaseController{
 
 		 $nom = $this->input->post('nom');
 		 $email = $this->input->post('email');
-		 $text = $this->input->post('text');
+		 $text = nl2br($this->input->post('text'));
 
 		  $contentInfo = array(
                                               'nom'=>$nom ,
@@ -29,10 +27,9 @@ class Contact extends BaseController{
                                               'text'=>$text ,
                                              );
 
+		 $this->contact_model->addContact($contentInfo) ; 
 
-		 var_dump($contentInfo) ;
-
-	//	redirect("/") ;
+		redirect("/?c=1") ;
 	}
 
 
