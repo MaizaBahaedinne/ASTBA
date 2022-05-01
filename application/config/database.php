@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => 'cp4.tn.oxa.host',
 	'username' => 'oqtjbzle_bd',
 	'password' => 'sbJWSXPVKtMi',
 	'database' => 'oqtjbzle_astbaDB',
