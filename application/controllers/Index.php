@@ -8,7 +8,7 @@ class Index extends BaseController {
 public function __construct()
     {
         parent::__construct();
-        $this->load->model('news_model');
+ 
         $this->isLoggedIn() ;
 
     }
@@ -30,8 +30,8 @@ public function __construct()
 	 */
 	public function index()
 	{
-		$data["newsRecords"]=$this->news_model->newsListing();
-		$this->loadViews("index", $this->global, $data , NULL); 
+		
+		$this->loadViews("index", $this->global, NULL , NULL); 
 	}
 
 
