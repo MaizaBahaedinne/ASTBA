@@ -32,7 +32,32 @@ class Contact extends BaseController{
 		redirect("/?c=1") ;
 	}
 
+	public function Notify ()
+	{	
 
+		 
+		 $email = $this->input->post('email');
+		 $ip = $this->input->post('ip');
+
+		  $contentInfo = array(
+                                             
+                                              'email'=>$email ,
+                                              'ip'=> $this->input->ip_address() ,
+                                             );
+
+		if( count($this->contact_model->checkNotify($email) )  == 0 ) 
+		{  
+		 $this->contact_model->addNotify($contentInfo) ; 
+				redirect("/?n=1") ;
+		}
+
+		else
+		{
+				redirect("/?n=2") ;
+		}
+
+		
+	}
 
 
 }

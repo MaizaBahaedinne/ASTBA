@@ -57,10 +57,21 @@
               <form action="<?php echo base_url()  ?>Contact/Notify" role="form" method="post">
                 <div class="input-group">
                   <input type="email" id="subscribe-form-email" name="subscribe-form-email" class="form-control required" required="" placeholder="Enter Your Email Here..">
-                  <button id="subscribe-form-submit" name="subscribe-form-submit" class="btn btn-primary px-4 shadow-none" type="submit"><span class="d-none d-sm-block">Prévenez-moi</span><span class="text-4 d-block d-sm-none"><i class="fas fa-arrow-right"></i></span></button>
+                  <button id="subscribe-form-submit" name="email" class="btn btn-primary px-4 shadow-none" type="submit"><span class="d-none d-sm-block">Prévenez-moi</span><span class="text-4 d-block d-sm-none"><i class="fas fa-arrow-right"></i></span></button>
                 </div>
               </form>
-              <div class="subscribe-form-result mt-3"></div>
+              <div class="subscribe-form-result mt-3">
+                <?php if (empty($_GET["n"])) { $_GET["n"] = 0 ; } if($_GET["n"] == 1 ) {   ?>
+                  <div class="alert alert-success" role="alert">
+                    Votre adresse a été enregistrée
+                  </div>
+                <?php }  ?>
+                <?php if($_GET["n"] == 2 ) {   ?>
+                  <div class="alert alert-danger" role="alert">
+                    Votre adresse existe déja dans nos bases de données
+                  </div>
+                <?php }?>
+              </div>
               </div>
               <!-- Subscribe End -->
                 </div>
